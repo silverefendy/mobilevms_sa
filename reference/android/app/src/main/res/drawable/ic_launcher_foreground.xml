@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Rounded background plate -->
+    <path
+        android:fillColor="#0D7490"
+        android:pathData="M20,18h68a8,8 0,0 1,8 8v56a8,8 0,0 1,-8 8H20a8,8 0,0 1,-8 -8V26a8,8 0,0 1,8 -8z" />
+
+    <!-- Building body (white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,72 L30,36 Q30,32 34,32 L74,32 Q78,32 78,36 L78,72 Z" />
+
+    <!-- Building roof accent (teal darker) -->
+    <path
+        android:fillColor="#0A5F75"
+        android:pathData="M28,36 Q28,30 34,30 L74,30 Q80,30 80,36 L80,40 L28,40 Z" />
+
+    <!-- Windows row 1 -->
+    <path
+        android:fillColor="#0D7490"
+        android:pathData="M36,44 h8 v7 h-8 z M50,44 h8 v7 h-8 z M64,44 h8 v7 h-8 z" />
+
+    <!-- Windows row 2 -->
+    <path
+        android:fillColor="#0D7490"
+        android:pathData="M36,56 h8 v7 h-8 z M50,56 h8 v7 h-8 z M64,56 h8 v7 h-8 z" />
+
+    <!-- Main door -->
+    <path
+        android:fillColor="#0A5F75"
+        android:pathData="M49,72 L49,62 Q49,59 52,59 L56,59 Q59,59 59,62 L59,72 Z" />
+
+    <!-- Shield overlay (bottom-right) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M68,58 L82,63 L82,73 Q82,82 75,86 Q68,82 68,73 Z" />
+    <path
+        android:fillColor="#0D7490"
+        android:pathData="M70,61 L80,65 L80,73 Q80,80 75,83 Q70,80 70,73 Z" />
+    <!-- Shield checkmark -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M72.5,72 L74.5,74.5 L78,70" />
+</vector>
