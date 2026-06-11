@@ -1,0 +1,151 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'approval_models.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ApprovalTaskResponse _$ApprovalTaskResponseFromJson(
+  Map<String, dynamic> json,
+) => ApprovalTaskResponse(
+  id: json['id'] as String,
+  companyId: json['companyId'] as String,
+  visitRequestId: json['visitRequestId'] as String,
+  approverUserId: json['approverUserId'] as String,
+  approvalType: json['approvalType'] as String,
+  level: (json['level'] as num).toInt(),
+  status: json['status'] as String,
+  dueAt: DateTime.parse(json['dueAt'] as String),
+  assignedAt: DateTime.parse(json['assignedAt'] as String),
+  startedAt: json['startedAt'] == null
+      ? null
+      : DateTime.parse(json['startedAt'] as String),
+  completedAt: json['completedAt'] == null
+      ? null
+      : DateTime.parse(json['completedAt'] as String),
+  escalatedFromId: json['escalatedFromId'] as String?,
+  notes: json['notes'] as String?,
+  createdAt: DateTime.parse(json['createdAt'] as String),
+  updatedAt: DateTime.parse(json['updatedAt'] as String),
+);
+
+Map<String, dynamic> _$ApprovalTaskResponseToJson(
+  ApprovalTaskResponse instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'companyId': instance.companyId,
+  'visitRequestId': instance.visitRequestId,
+  'approverUserId': instance.approverUserId,
+  'approvalType': instance.approvalType,
+  'level': instance.level,
+  'status': instance.status,
+  'dueAt': instance.dueAt.toIso8601String(),
+  'assignedAt': instance.assignedAt.toIso8601String(),
+  'startedAt': instance.startedAt?.toIso8601String(),
+  'completedAt': instance.completedAt?.toIso8601String(),
+  'escalatedFromId': instance.escalatedFromId,
+  'notes': instance.notes,
+  'createdAt': instance.createdAt.toIso8601String(),
+  'updatedAt': instance.updatedAt.toIso8601String(),
+};
+
+ApprovalTaskApproveRequest _$ApprovalTaskApproveRequestFromJson(
+  Map<String, dynamic> json,
+) => ApprovalTaskApproveRequest(
+  reason: json['reason'] as String?,
+  comments: json['comments'] as String?,
+);
+
+Map<String, dynamic> _$ApprovalTaskApproveRequestToJson(
+  ApprovalTaskApproveRequest instance,
+) => <String, dynamic>{
+  'reason': instance.reason,
+  'comments': instance.comments,
+};
+
+ApprovalTaskRejectRequest _$ApprovalTaskRejectRequestFromJson(
+  Map<String, dynamic> json,
+) => ApprovalTaskRejectRequest(
+  reason: json['reason'] as String,
+  comments: json['comments'] as String?,
+);
+
+Map<String, dynamic> _$ApprovalTaskRejectRequestToJson(
+  ApprovalTaskRejectRequest instance,
+) => <String, dynamic>{
+  'reason': instance.reason,
+  'comments': instance.comments,
+};
+
+ApprovalDecisionResponse _$ApprovalDecisionResponseFromJson(
+  Map<String, dynamic> json,
+) => ApprovalDecisionResponse(
+  id: json['id'] as String,
+  approvalTaskId: json['approvalTaskId'] as String,
+  decidedBy: json['decidedBy'] as String,
+  decision: json['decision'] as String,
+  reason: json['reason'] as String?,
+  comments: json['comments'] as String?,
+  decidedAt: DateTime.parse(json['decidedAt'] as String),
+  metadataJson: json['metadataJson'] as String?,
+  createdAt: DateTime.parse(json['createdAt'] as String),
+);
+
+Map<String, dynamic> _$ApprovalDecisionResponseToJson(
+  ApprovalDecisionResponse instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'approvalTaskId': instance.approvalTaskId,
+  'decidedBy': instance.decidedBy,
+  'decision': instance.decision,
+  'reason': instance.reason,
+  'comments': instance.comments,
+  'decidedAt': instance.decidedAt.toIso8601String(),
+  'metadataJson': instance.metadataJson,
+  'createdAt': instance.createdAt.toIso8601String(),
+};
+
+ApprovalTaskListResponse _$ApprovalTaskListResponseFromJson(
+  Map<String, dynamic> json,
+) => ApprovalTaskListResponse(
+  items: (json['items'] as List<dynamic>)
+      .map((e) => ApprovalTaskResponse.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  total: (json['total'] as num).toInt(),
+  page: (json['page'] as num).toInt(),
+  pageSize: (json['pageSize'] as num).toInt(),
+  pages: (json['pages'] as num).toInt(),
+);
+
+Map<String, dynamic> _$ApprovalTaskListResponseToJson(
+  ApprovalTaskListResponse instance,
+) => <String, dynamic>{
+  'items': instance.items,
+  'total': instance.total,
+  'page': instance.page,
+  'pageSize': instance.pageSize,
+  'pages': instance.pages,
+};
+
+ApprovalDecisionListResponse _$ApprovalDecisionListResponseFromJson(
+  Map<String, dynamic> json,
+) => ApprovalDecisionListResponse(
+  items: (json['items'] as List<dynamic>)
+      .map((e) => ApprovalDecisionResponse.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  total: (json['total'] as num).toInt(),
+  page: (json['page'] as num).toInt(),
+  pageSize: (json['pageSize'] as num).toInt(),
+  pages: (json['pages'] as num).toInt(),
+);
+
+Map<String, dynamic> _$ApprovalDecisionListResponseToJson(
+  ApprovalDecisionListResponse instance,
+) => <String, dynamic>{
+  'items': instance.items,
+  'total': instance.total,
+  'page': instance.page,
+  'pageSize': instance.pageSize,
+  'pages': instance.pages,
+};

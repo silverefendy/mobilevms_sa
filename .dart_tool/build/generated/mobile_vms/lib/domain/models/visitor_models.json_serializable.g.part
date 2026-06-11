@@ -1,0 +1,142 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+VisitorResponse _$VisitorResponseFromJson(Map<String, dynamic> json) =>
+    VisitorResponse(
+      id: json['id'] as String,
+      firstName: json['firstName'] as String,
+      lastName: json['lastName'] as String,
+      email: json['email'] as String,
+      phone: json['phone'] as String,
+      company: json['company'] as String,
+      status: json['status'] as String,
+      createdAt: DateTime.parse(json['createdAt'] as String),
+      updatedAt: DateTime.parse(json['updatedAt'] as String),
+    );
+
+Map<String, dynamic> _$VisitorResponseToJson(VisitorResponse instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'firstName': instance.firstName,
+      'lastName': instance.lastName,
+      'email': instance.email,
+      'phone': instance.phone,
+      'company': instance.company,
+      'status': instance.status,
+      'createdAt': instance.createdAt.toIso8601String(),
+      'updatedAt': instance.updatedAt.toIso8601String(),
+    };
+
+VisitRequestResponse _$VisitRequestResponseFromJson(
+  Map<String, dynamic> json,
+) => VisitRequestResponse(
+  id: json['id'] as String,
+  visitorId: json['visitorId'] as String,
+  hostEmployeeId: json['hostEmployeeId'] as String,
+  purposeId: json['purposeId'] as String?,
+  scheduledStart: DateTime.parse(json['scheduledStart'] as String),
+  scheduledEnd: DateTime.parse(json['scheduledEnd'] as String),
+  status: json['status'] as String,
+  requestNo: json['requestNo'] as String,
+  createdAt: DateTime.parse(json['createdAt'] as String),
+  updatedAt: DateTime.parse(json['updatedAt'] as String),
+);
+
+Map<String, dynamic> _$VisitRequestResponseToJson(
+  VisitRequestResponse instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'visitorId': instance.visitorId,
+  'hostEmployeeId': instance.hostEmployeeId,
+  'purposeId': instance.purposeId,
+  'scheduledStart': instance.scheduledStart.toIso8601String(),
+  'scheduledEnd': instance.scheduledEnd.toIso8601String(),
+  'status': instance.status,
+  'requestNo': instance.requestNo,
+  'createdAt': instance.createdAt.toIso8601String(),
+  'updatedAt': instance.updatedAt.toIso8601String(),
+};
+
+VisitorListResponse _$VisitorListResponseFromJson(Map<String, dynamic> json) =>
+    VisitorListResponse(
+      items: (json['items'] as List<dynamic>)
+          .map((e) => VisitorResponse.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      total: (json['total'] as num).toInt(),
+      page: (json['page'] as num).toInt(),
+      pageSize: (json['pageSize'] as num).toInt(),
+      pages: (json['pages'] as num).toInt(),
+    );
+
+Map<String, dynamic> _$VisitorListResponseToJson(
+  VisitorListResponse instance,
+) => <String, dynamic>{
+  'items': instance.items,
+  'total': instance.total,
+  'page': instance.page,
+  'pageSize': instance.pageSize,
+  'pages': instance.pages,
+};
+
+VisitRequestListResponse _$VisitRequestListResponseFromJson(
+  Map<String, dynamic> json,
+) => VisitRequestListResponse(
+  items: (json['items'] as List<dynamic>)
+      .map((e) => VisitRequestResponse.fromJson(e as Map<String, dynamic>))
+      .toList(),
+  total: (json['total'] as num).toInt(),
+  page: (json['page'] as num).toInt(),
+  pageSize: (json['pageSize'] as num).toInt(),
+  pages: (json['pages'] as num).toInt(),
+);
+
+Map<String, dynamic> _$VisitRequestListResponseToJson(
+  VisitRequestListResponse instance,
+) => <String, dynamic>{
+  'items': instance.items,
+  'total': instance.total,
+  'page': instance.page,
+  'pageSize': instance.pageSize,
+  'pages': instance.pages,
+};
+
+VisitorCreateRequest _$VisitorCreateRequestFromJson(
+  Map<String, dynamic> json,
+) => VisitorCreateRequest(
+  firstName: json['firstName'] as String,
+  lastName: json['lastName'] as String,
+  email: json['email'] as String,
+  phone: json['phone'] as String,
+  company: json['company'] as String,
+);
+
+Map<String, dynamic> _$VisitorCreateRequestToJson(
+  VisitorCreateRequest instance,
+) => <String, dynamic>{
+  'firstName': instance.firstName,
+  'lastName': instance.lastName,
+  'email': instance.email,
+  'phone': instance.phone,
+  'company': instance.company,
+};
+
+VisitRequestCreateRequest _$VisitRequestCreateRequestFromJson(
+  Map<String, dynamic> json,
+) => VisitRequestCreateRequest(
+  visitorId: json['visitorId'] as String,
+  hostEmployeeId: json['hostEmployeeId'] as String,
+  purposeId: json['purposeId'] as String?,
+  scheduledStart: DateTime.parse(json['scheduledStart'] as String),
+  scheduledEnd: DateTime.parse(json['scheduledEnd'] as String),
+);
+
+Map<String, dynamic> _$VisitRequestCreateRequestToJson(
+  VisitRequestCreateRequest instance,
+) => <String, dynamic>{
+  'visitorId': instance.visitorId,
+  'hostEmployeeId': instance.hostEmployeeId,
+  'purposeId': instance.purposeId,
+  'scheduledStart': instance.scheduledStart.toIso8601String(),
+  'scheduledEnd': instance.scheduledEnd.toIso8601String(),
+};

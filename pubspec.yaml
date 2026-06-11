@@ -1,0 +1,55 @@
+name: mobile_vms
+description: Mobile Visitor Management System - Production Implementation
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  
+  # HTTP & Networking
+  dio: ^5.4.0
+  
+  # State Management
+  provider: ^6.1.1
+  
+  # QR Scanning
+  mobile_scanner: ^7.2.0
+  
+  # Secure Storage
+  flutter_secure_storage: ^9.0.0
+  
+  # Navigation
+  go_router: ^13.2.0
+  
+  # Cryptography
+  crypto: ^3.0.6
+  
+  # Path Provider
+  path_provider: ^2.1.2
+  
+  # Shared Preferences
+  shared_preferences: ^2.2.3
+  
+  # UUID
+  uuid: ^4.0.0
+  
+  # JSON Annotation
+  json_annotation: ^4.12.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.6
+  json_serializable: ^6.7.1
+  mockito: ^5.4.4
+  integration_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
